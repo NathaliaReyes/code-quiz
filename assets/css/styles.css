@@ -1,3 +1,11 @@
+:root {
+    --primary-color: rgb(192, 9, 216);
+    --light: white;
+    --light-bg: rgb(240, 219, 243);
+    --light-bg-2: rgb(245, 191, 234);
+    --dark: black;
+}
+
 body {
     position: relative;
 }
@@ -10,7 +18,7 @@ body {
 }
 
 a {
-    color: rgb(192, 9, 216);
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 1em;
 }
@@ -36,7 +44,7 @@ h4 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 3rem;/* Add a border */
+    margin-top: 3rem;
 }
 
 #content {
@@ -56,16 +64,16 @@ h4 {
     margin: 20px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid rgb(192, 9, 216);
-    background-color: rgb(192, 9, 216);
-    color: white;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--light);
     font-size: 20px;
     cursor: pointer;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
 }
 
 .btn-start:hover, .btn-submit:hover {
-    background-color: rgb(245, 191, 234);
+    background-color: var(--light-bg-2);
     color: rgba(0, 0, 0, 0.975);
 }
 
@@ -73,8 +81,8 @@ h4 {
     margin: 20px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid rgb(192, 9, 216);
-    background-color: rgb(192, 9, 216);
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
     color: white;
     font-size: 20px;
     cursor: pointer;
@@ -83,7 +91,7 @@ h4 {
 }
 
 .btn-back:hover, .btn-clean:hover {
-    background-color: rgb(245, 191, 234);
+    background-color: var(--light-bg-2);
     color: rgba(0, 0, 0, 0.975);
 }
 
@@ -99,11 +107,11 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items:start;
-    background-color: rgb(240, 219, 243);
-    border: 2px solid rgb(220, 208, 221); /* Add a border */
-    font-size: 1.2em; /* Make the text larger */
-    font-family: Arial, sans-serif; /* Change the font */
-    padding: 20px 0; /* Add some padding */
+    background-color: var(--light-bg);
+    border: 2px solid var(--light-bg); 
+    font-size: 1.2em;
+    font-family: Arial, sans-serif; 
+    padding: 20px 0; 
     
 }
 
@@ -126,7 +134,7 @@ input {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid rgb(192, 9, 216);
+    border: 1px solid var(--primary-color);
     color: black;
     font-size: 20px;
     cursor: pointer;
@@ -140,16 +148,16 @@ input {
     margin: 5px;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid rgb(192, 9, 216);
+    border: 1px solid var(--primary-color);
     background-color: rgb(214, 135, 225);
-    color: black;
+    color: var(--dark);
     font-size: 20px;
     cursor: pointer;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
 }
 
 .btn-answer:hover {
-    background-color: rgb(245, 191, 234);
+    background-color: var(--light-bg-2);
     color: rgba(0, 0, 0, 0.975);
 }
 
