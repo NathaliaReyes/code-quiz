@@ -30,7 +30,7 @@ Please refer to the LICENSE in the repo.
 
 ## Website
 
-Link to the live application: 
+Link to the live application: https://nathaliareyes.github.io/code-quiz/
 The following image shows the web application's appearance and functionality:
 
 ![START-APPLICATION](./assets/img/start.png)
