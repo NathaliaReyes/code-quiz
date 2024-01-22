@@ -1,27 +1,54 @@
-# code-quiz
+# 👩‍💻code-quiz👨‍💻
 This is the Challenge-04 related to Web APIs
 
-04 Web APIs: Code Quiz
-Your Task
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment—perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges.
+## Description
 
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface.
+This project is a JavaScript-based coding assessment. Users will face nine multiple-choice questions related to programming, specifically focusing on the JavaScript language. Participants are given a total of 90 seconds to answer all questions. For each incorrect response, 10 seconds will be deducted from the total time. Once all questions are answered, users will submit their initials (first name and last name). They have the option to view the two highest scores and also clear the score history.
+SweetAlert library and Google fonts are used in this project.
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+## Features
 
-User Story
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-Acceptance Criteria
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
+1. Timer Display.
+2. Feedback on Answers.
+3. Score Calculation.
+4. User-friendly interface.
+
+## Table of Contents
+
+- [Credits](#credits)
+- [License](#license)
+- [Website-Appearance](#website)
+
+
+## Credits
+
+N/A
+
+## License
+
+Please refer to the LICENSE in the repo.
+
+## Website
+
+Link to the live application: 
+The following image shows the web application's appearance and functionality:
+
+![START-APPLICATION](./assets/img/start.png)
+
+![QUESTION-PROMPT](./assets/img/questions.png)
+
+![SCORES](./assets/img/list_scores.png)
+
+![NO-SCORES](./assets/img/alert_no_scores.png)
+
+![TOP-SCORES](./assets/img/aler_top_scores.png)
+
+
+## Badges
+
+![Static Badge](https://img.shields.io/badge/HTML-25%25-lightgrey)
+![Static Badge](https://img.shields.io/badge/CSS-25%25-blue)
+![Static Badge](https://img.shields.io/badge/JAVASCRIPT-50%25-orange)
+
+
+## Thanks for stopping here!.
