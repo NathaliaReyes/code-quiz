@@ -6,6 +6,7 @@ var quizEl = document.getElementById("quiz");
 var btnSubmit = document.querySelector(".btn-submit")
 var userInitials = document.getElementById("initials");
 var formEl = document.getElementById("initials-form");
+var viewScoresLink = document.getElementById("viewScoresLink");
 var score = 0;
 var questionIndex = 0;
 var secondsLeft = 90;
@@ -147,7 +148,7 @@ function renderLastScore() {
     // Add each score to the list
     for (var i = 0; i < scores.length; i++) {
         var li = document.createElement('li'); // create a list item
-        li.textContent = scores[i].user + ': ' + scores[i].score; // set the text
+        li.textContent = (i + 1) + "  " + scores[i].user + ': ' + scores[i].score; // set the text
         li.className = 'score-item';
         list.appendChild(li); // add the list item to the list
     }
@@ -181,6 +182,53 @@ btnSubmit.addEventListener('click', function(event){
     saveLastScore();
     renderLastScore();
 })
+
+
+viewScoresLink.addEventListener('click', function(event) {
+    // Prevent the default action of the <a> tag
+    event.preventDefault();
+
+    var scores = JSON.parse(localStorage.getItem('scores'));
+    if(scores === null) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "There are no scores to show.",
+            footer: '<a href="#" id="quizLink">Do you want to take the Code Quiz?</a>'
+        });
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'quizLink') {
+            event.preventDefault();
+            Swal.close();
+            location.reload();
+        }
+    });
+    } else {
+        // Sort the scores from highest to lowest
+        scores.sort(function(a, b) {
+            return b.score - a.score;
+        });
+
+        // Get the top two scores
+        var topTwoScores = scores.slice(0, 2);
+        
+        // Create a message with the top two scores
+        var message = '\n';
+        topTwoScores.forEach(function(score, index) {
+            message += (index + 1) + '. ' + score.user + ': ' + score.score + '\n';
+        });
+
+        Swal.fire({
+            title: "Top two scores:",
+            text: message,
+            imageUrl: "https://images.unsplash.com/flagged/photo-1578928534298-9747fc52ec97?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "First and Second Places"
+            });
+        
+        }
+});
 
 
 
